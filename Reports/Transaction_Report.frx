@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="30/12/2025 16:14:43" ReportInfo.Modified="01/13/2026 12:58:11" ReportInfo.CreatorVersion="2024.2.0.0">
+  <Dictionary>
+    <TableDataSource Name="TransactionOverview" ReferenceName="TransactionOverview" DataType="System.Int32" Enabled="true">
+      <Column Name="AFFILIATE NUMBER" DataType="System.String"/>
+      <Column Name="TRANSACTION DATE" DataType="System.String"/>
+      <Column Name="VOUCHER NUMBER" DataType="System.String"/>
+      <Column Name="EXPIRATION DATE" DataType="System.String"/>
+      <Column Name="DESCRIPTION" DataType="System.String"/>
+      <Column Name="AMOUNT" DataType="System.Decimal"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210" RawPaperSize="9" Watermark.Font="Arial, 60pt" LastPageSource="15" FirstPageSource="15">
+    <ReportTitleBand Name="ReportTitle1" Width="1047.06" Height="103.95">
+      <TextObject Name="Text1" Left="255.15" Top="37.8" Width="481.95" Height="18.9" Text="TRANSACTION REPORT" HorzAlign="Center" Font="Calibri, 14pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="107.95" Width="1047.06" Height="86.04">
+      <TextObject Name="Text2" Top="9.45" Width="141.75" Height="18.9" Text="MERCHANT NAME" HorzAlign="Center" Font="Calibri, 11pt, style=Bold"/>
+      <TextObject Name="Text3" Left="151.2" Top="9.45" Width="113.4" Height="18.9" Text="[MerchantName]" HorzAlign="Center" Font="Calibri, 11pt"/>
+      <TextObject Name="Text4" Left="359.1" Top="9.45" Width="103.95" Height="18.9" Text="MERCHANT ID" HorzAlign="Center" Font="Calibri, 11pt, style=Bold"/>
+      <TextObject Name="Text5" Left="472.5" Top="9.45" Width="113.4" Height="18.9" Text="[MerchantId]" Font="Calibri, 11pt"/>
+      <TextObject Name="Text6" Left="888.3" Top="9.45" Width="56.7" Height="18.9" Text="From" Font="Calibri, 11pt, style=Bold"/>
+      <TextObject Name="Text7" Left="888.3" Top="28.35" Width="56.7" Height="18.9" Text="To" Font="Calibri, 11pt, style=Bold"/>
+      <TextObject Name="Text8" Left="945" Top="9.45" Width="94.5" Height="18.9" Text="[From]" Font="Calibri, 11pt"/>
+      <TextObject Name="Text9" Left="945" Top="28.35" Width="94.5" Height="18.9" Text="[To]" Font="Calibri, 11pt"/>
+      <TextObject Name="Text10" Top="62" Width="132.3" Height="18.9" Text="AFFILIATE NUMBER" HorzAlign="Center" Font="Calibri, 11pt, style=Bold"/>
+      <TextObject Name="Text11" Left="274.05" Top="62" Width="160.65" Height="18.9" Text="TRANSACTION DATE" HorzAlign="Center" Font="Calibri, 11pt, style=Bold"/>
+      <TextObject Name="Text12" Left="434.7" Top="62" Width="122.85" Height="18.9" Text="VOUCHER" HorzAlign="Center" Font="Calibri, 11pt, style=Bold"/>
+      <TextObject Name="Text13" Left="567" Top="62" Width="160.65" Height="18.9" Text="EXPIRATION DATE" HorzAlign="Center" Font="Calibri, 11pt, style=Bold"/>
+      <TextObject Name="Text15" Left="963.9" Top="62" Width="94.5" Height="18.9" Text="AMOUNT" HorzAlign="Center" Font="Calibri, 11pt, style=Bold"/>
+      <TextObject Name="Text14" Left="763.55" Top="62" Width="151.2" Height="18.9" Text="DESCRIPTION" HorzAlign="Center" Font="Calibri, 11pt, style=Bold"/>
+      <ShapeObject Name="Shape5" Left="-18.9" Top="81.5" Width="1082.85" Height="4.54" Border.Width="0.25" Fill="LinearGradient" Fill.StartColor="DarkGreen" Fill.EndColor="DarkBlue" Fill.Angle="0" Fill.Focus="1" Fill.Contrast="1"/>
+      <TextObject Name="Text22" Left="141.75" Top="61.99" Width="122.85" Height="18.9" Text="TERMINAL ID" HorzAlign="Center" Font="Calibri, 11pt, style=Bold"/>
+      <ShapeObject Name="Shape6" Left="-18.9" Top="56.7" Width="1082.85" Height="4.54" Border.Width="0.25" Fill="LinearGradient" Fill.StartColor="DarkGreen" Fill.EndColor="DarkBlue" Fill.Angle="0" Fill.Focus="1" Fill.Contrast="1"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="197.99" Width="1047.06" Height="27" DataSource="TransactionOverview">
+      <TextObject Name="Text16" Left="9.45" Width="122.85" Height="18.9" Text="[TransactionOverview.AFFILIATE NUMBER]" HorzAlign="Center" Font="Calibri, 11pt"/>
+      <TextObject Name="Text18" Left="460.15" Width="94.5" Height="18.9" Text="[TransactionOverview.VOUCHER NUMBER]" HorzAlign="Center" Font="Calibri, 11pt"/>
+      <TextObject Name="Text19" Left="576.45" Width="140.05" Height="18.9" Text="[TransactionOverview.EXPIRATION DATE]" HorzAlign="Center" Font="Calibri, 11pt"/>
+      <TextObject Name="Text20" Left="720.75" Width="239.35" Height="18.9" Text="[TransactionOverview.DESCRIPTION]" HorzAlign="Center" Font="Calibri, 11pt"/>
+      <TextObject Name="Text21" Left="944.65" Width="113.4" Height="18.9" Text="[TransactionOverview.AMOUNT]" HorzAlign="Right" Font="Calibri, 11pt"/>
+      <TextObject Name="Text17" Left="313.4" Width="103.95" Height="18.9" Text="[TransactionOverview.TRANSACTION DATE]" HorzAlign="Center" Font="Calibri, 11pt"/>
+      <LineObject Name="Line1" Left="-18.9" Top="23" Width="1082.85" Border.Color="Silver" Border.Width="2"/>
+      <TextObject Name="Text23" Left="141.75" Width="132.3" Height="18.9" Text="[TransactionOverview.TERMINAL ID]" HorzAlign="Center" Font="Calibri, 11pt"/>
+      <DataFooterBand Name="DataFooter1" Top="228.99" Width="1047.06" Height="24.41">
+        <ShapeObject Name="Shape4" Left="-26.35" Top="-4" Width="1098.2" Height="2.65" Border.Width="0.3" Fill="LinearGradient" Fill.StartColor="DarkGreen" Fill.EndColor="DarkBlue" Fill.Angle="0" Fill.Focus="1" Fill.Contrast="1"/>
+        <TextObject Name="Text42" Left="944.62" Top="-0.5" Width="113.4" Height="18.9" Text="[TotalAmount]" HorzAlign="Right" Font="Calibri, 11pt, style=Bold"/>
+        <ShapeObject Name="Shape3" Left="-26.35" Top="21.76" Width="1098.2" Height="2.65" Border.Width="0.3" Fill="LinearGradient" Fill.StartColor="DarkGreen" Fill.EndColor="DarkBlue" Fill.Angle="0" Fill.Focus="1" Fill.Contrast="1"/>
+        <TextObject Name="Text38" Left="886.3" Top="-0.5" Width="56.7" Height="18.9" Text="TOTAL" HorzAlign="Right" Font="Calibri, 11pt, style=Bold"/>
+      </DataFooterBand>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="257.4" Width="1047.06" Height="18.9"/>
+  </ReportPage>
+</Report>
